@@ -1,9 +1,11 @@
 import React from 'react';
 import { Lock, Zap, ShieldAlert, ArrowRight, CheckCircle2, AlertOctagon, Terminal } from 'lucide-react';
+import ParticlesCanvas from './ParticlesCanvas';
 
 export function Hero({ onOpenCreateToken, onScrollToSimulator, onOpenCAB }) {
   return (
     <section className="relative pt-12 pb-16 overflow-hidden bg-grid-pattern">
+      <ParticlesCanvas color="6, 182, 212" />
       {/* Ambient background glows */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[360px] bg-cyan-500/10 rounded-full blur-[130px] pointer-events-none" />
       <div className="absolute top-1/3 right-1/4 w-[380px] h-[260px] bg-rose-500/10 rounded-full blur-[110px] pointer-events-none" />

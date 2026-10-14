@@ -9,6 +9,7 @@ import { PricingSection } from './components/PricingSection';
 import { Footer } from './components/Footer';
 import { CreateTokenModal } from './components/CreateTokenModal';
 import { CABModal } from './components/CABModal';
+import OutcomeChart from './components/OutcomeChart';
 import { MOCK_TOKENS } from './data/mockTokens';
 
 function App() {
@@ -65,6 +66,11 @@ function App() {
           onScrollToSimulator={handleScrollToSimulator}
           onOpenCAB={() => setIsCABOpen(true)}
         />
+
+        {/* Julien Bek $1:$6 Sequoia Framework + Bklit UI Outcome Engine */}
+        <section className="px-4 sm:px-6 lg:px-8">
+          <OutcomeChart onCtaClick={() => setIsCABOpen(true)} />
+        </section>
 
         {/* Live Ephemeral Tokens Dashboard & Kill-Switches */}
         <TokenDashboard 
